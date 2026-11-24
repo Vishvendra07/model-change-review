@@ -1,0 +1,417 @@
+{
+  "baseline": {
+    "name": "word TF-IDF",
+    "training_examples": 24,
+    "evaluation_examples": 21,
+    "balanced_accuracy": 0.9047619047619048,
+    "classes": [
+      "access",
+      "billing",
+      "schedule"
+    ],
+    "confusion": [
+      [
+        6,
+        0,
+        1
+      ],
+      [
+        0,
+        6,
+        1
+      ],
+      [
+        0,
+        0,
+        7
+      ]
+    ],
+    "batch_inference_ms": 1.289,
+    "thresholds": {
+      "0.4": {
+        "routed": 16,
+        "coverage": 0.7619,
+        "routed_accuracy": 1.0
+      },
+      "0.5": {
+        "routed": 1,
+        "coverage": 0.0476,
+        "routed_accuracy": 1.0
+      },
+      "0.6": {
+        "routed": 0,
+        "coverage": 0.0,
+        "routed_accuracy": null
+      },
+      "0.7": {
+        "routed": 0,
+        "coverage": 0.0,
+        "routed_accuracy": null
+      }
+    },
+    "predictions": [
+      {
+        "id": "bill-01",
+        "text": "payment posted twice",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.4612804251405251
+      },
+      {
+        "id": "bill-02",
+        "text": "invoce renewal amount",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.4301402028031868
+      },
+      {
+        "id": "bill-03",
+        "text": "reverse this credit-card transaction",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.4963395971368148
+      },
+      {
+        "id": "bill-04",
+        "text": "I want the payment receipt",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.4822416179003716
+      },
+      {
+        "id": "bill-05",
+        "text": "charger refused my card",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.406536906066001
+      },
+      {
+        "id": "bill-06",
+        "text": "account charged me after renewal",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.36665262408872723
+      },
+      {
+        "id": "access-01",
+        "text": "sign-in link expired",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.5303225630149472
+      },
+      {
+        "id": "access-02",
+        "text": "forgot my passwrd",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.40669329711464536
+      },
+      {
+        "id": "access-03",
+        "text": "can\u2019t log into dashboard",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.4118107947209026
+      },
+      {
+        "id": "access-04",
+        "text": "workspace login locked",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.43127340148490045
+      },
+      {
+        "id": "access-05",
+        "text": "reset account credentials",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.4990326806813553
+      },
+      {
+        "id": "access-06",
+        "text": "my receipt opens but my account won\u2019t",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.4372579079466584
+      },
+      {
+        "id": "schedule-01",
+        "text": "appointment date is wrong",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.4087030417614159
+      },
+      {
+        "id": "schedule-02",
+        "text": "rescedule tomorrow\u2019s consultation",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.442570819168612
+      },
+      {
+        "id": "schedule-03",
+        "text": "move the meeting invite",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.4774839642613069
+      },
+      {
+        "id": "schedule-04",
+        "text": "change to an earlier slot",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.4820594018481981
+      },
+      {
+        "id": "schedule-05",
+        "text": "calendar invitation has wrong time",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.4204062830595707
+      },
+      {
+        "id": "schedule-06",
+        "text": "please cancel the meeting and refund",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.39624661940698436
+      },
+      {
+        "id": "stress-01",
+        "text": "refnd reciept unexpcted",
+        "expected": "billing",
+        "predicted": "schedule",
+        "score": 0.33827802702981874
+      },
+      {
+        "id": "stress-02",
+        "text": "passwrd signn credentals",
+        "expected": "access",
+        "predicted": "schedule",
+        "score": 0.33827802702981874
+      },
+      {
+        "id": "stress-03",
+        "text": "calendr appoitment rescedule",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.33827802702981874
+      }
+    ]
+  },
+  "candidate": {
+    "name": "character TF-IDF",
+    "training_examples": 24,
+    "evaluation_examples": 21,
+    "balanced_accuracy": 1.0,
+    "classes": [
+      "access",
+      "billing",
+      "schedule"
+    ],
+    "confusion": [
+      [
+        7,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        7
+      ]
+    ],
+    "batch_inference_ms": 1.409,
+    "thresholds": {
+      "0.4": {
+        "routed": 21,
+        "coverage": 1.0,
+        "routed_accuracy": 1.0
+      },
+      "0.5": {
+        "routed": 10,
+        "coverage": 0.4762,
+        "routed_accuracy": 1.0
+      },
+      "0.6": {
+        "routed": 0,
+        "coverage": 0.0,
+        "routed_accuracy": null
+      },
+      "0.7": {
+        "routed": 0,
+        "coverage": 0.0,
+        "routed_accuracy": null
+      }
+    },
+    "predictions": [
+      {
+        "id": "bill-01",
+        "text": "payment posted twice",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.5183414479447399
+      },
+      {
+        "id": "bill-02",
+        "text": "invoce renewal amount",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.47467261623796275
+      },
+      {
+        "id": "bill-03",
+        "text": "reverse this credit-card transaction",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.5144750332905409
+      },
+      {
+        "id": "bill-04",
+        "text": "I want the payment receipt",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.518669287954702
+      },
+      {
+        "id": "bill-05",
+        "text": "charger refused my card",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.5007498439032325
+      },
+      {
+        "id": "bill-06",
+        "text": "account charged me after renewal",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.41645238641547383
+      },
+      {
+        "id": "access-01",
+        "text": "sign-in link expired",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.5033843800173476
+      },
+      {
+        "id": "access-02",
+        "text": "forgot my passwrd",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.4632214395824884
+      },
+      {
+        "id": "access-03",
+        "text": "can\u2019t log into dashboard",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.4665205333331896
+      },
+      {
+        "id": "access-04",
+        "text": "workspace login locked",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.5259475160945477
+      },
+      {
+        "id": "access-05",
+        "text": "reset account credentials",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.4960067417874545
+      },
+      {
+        "id": "access-06",
+        "text": "my receipt opens but my account won\u2019t",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.4336844845076404
+      },
+      {
+        "id": "schedule-01",
+        "text": "appointment date is wrong",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.4955566702303234
+      },
+      {
+        "id": "schedule-02",
+        "text": "rescedule tomorrow\u2019s consultation",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.5203535425778129
+      },
+      {
+        "id": "schedule-03",
+        "text": "move the meeting invite",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.5251629365137249
+      },
+      {
+        "id": "schedule-04",
+        "text": "change to an earlier slot",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.501998200777958
+      },
+      {
+        "id": "schedule-05",
+        "text": "calendar invitation has wrong time",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.49063485126262074
+      },
+      {
+        "id": "schedule-06",
+        "text": "please cancel the meeting and refund",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.4075260285412155
+      },
+      {
+        "id": "stress-01",
+        "text": "refnd reciept unexpcted",
+        "expected": "billing",
+        "predicted": "billing",
+        "score": 0.4480053758039085
+      },
+      {
+        "id": "stress-02",
+        "text": "passwrd signn credentals",
+        "expected": "access",
+        "predicted": "access",
+        "score": 0.4492451733129779
+      },
+      {
+        "id": "stress-03",
+        "text": "calendr appoitment rescedule",
+        "expected": "schedule",
+        "predicted": "schedule",
+        "score": 0.5385450648025102
+      }
+    ]
+  },
+  "changed_predictions": [
+    {
+      "id": "stress-01",
+      "expected": "billing",
+      "baseline": "schedule",
+      "candidate": "billing"
+    },
+    {
+      "id": "stress-02",
+      "expected": "access",
+      "baseline": "schedule",
+      "candidate": "access"
+    }
+  ],
+  "release_decision": "collect independent validation before routing customer tickets"
+}
